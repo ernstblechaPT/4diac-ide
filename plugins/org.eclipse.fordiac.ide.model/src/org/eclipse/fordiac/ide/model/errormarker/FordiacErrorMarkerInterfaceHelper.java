@@ -27,7 +27,7 @@ public final class FordiacErrorMarkerInterfaceHelper {
 
 	public static ErrorMarkerInterface createErrorMarkerInterface(final DataType type, final String name,
 			final boolean isInput, final InterfaceList ieList) {
-		return ieList.getErrorMarker().stream().filter(e -> e.getName().equals(name) && isInput == e.isIsInput())
+		return ieList.getErrorMarker().stream().filter(e -> name != null && name.equals(e.getName()) && isInput == e.isIsInput())
 				.findAny().orElseGet(() -> createErrorMarker(type, name, isInput, ieList));
 	}
 
