@@ -1,0 +1,1 @@
+This repository is a fork of https://github.com/eclipse-4diac/4diac-ide and will only contain temporary branches for creating pull requests.
